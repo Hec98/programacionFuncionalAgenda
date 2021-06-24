@@ -18,6 +18,5 @@ public class Insert {
         } catch (SQLException e) {
             System.err.println("Error -> "+ e.toString());
         }
-    
     }
 }

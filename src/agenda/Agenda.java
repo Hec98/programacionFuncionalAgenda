@@ -23,10 +23,9 @@ public class Agenda {
 
         List<Datos> l = u.getH(list);
 
-        l.stream().forEach(x -> {
-            System.out.println(x);
-            in.insertar(x.getNombre(), x.getTelefono(), x.getRfc(), x.getEdad());
-        });
+        l.stream().forEach(x -> System.out.println(x));
+        
+        l.stream().forEach(x -> in.insertar(x.getNombre(), x.getTelefono(), x.getRfc(), x.getEdad()));
         
         System.out.println("Datos enviados a la base de datos");
         
