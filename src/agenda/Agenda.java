@@ -8,27 +8,23 @@ public class Agenda {
     public static void main(String[] args) {
 
         Usuarios u = new Usuarios();
-        Insert in = new Insert();
+        Altas al = new Altas();
 
         List<Datos> list = Arrays.asList(new Datos("Uriel", 555555555, "RTEO34567", 30),
                                          new Datos("Jorge", 222222233, "RTEO34564", 34),
-                                         new Datos("Martha", 333333333, "RTEO34562", 50),
-                                         new Datos("Azul", 444444433, "RTEO3ñ567", 34),
+                                         new Datos("Martha", 333333333, "5TEO34562", 50),
+                                         new Datos("Azul", 444444433, "MTEO33567", 34),
                                          new Datos("Eduardo", 555555555, "RTEO34567", 30),
                                          new Datos("Juanes", 222222233, "RTEO34564", 34),
                                          new Datos("Hector", 333333333, "RTEO34562", 50),
-                                         new Datos("Lina", 444444433, "RTEO3ñ567", 34));
+                                         new Datos("Lina", 444444433, "ZTEO36567", 34));
 
-        // Datos p = u.getMPersona(list);
+        List<Datos> lista = u.getH(list);
 
-        List<Datos> l = u.getH(list);
-
-        l.stream().forEach(x -> System.out.println(x));
+        lista.stream().forEach(l -> System.out.println(l));
         
-        l.stream().forEach(x -> in.insertar(x.getNombre(), x.getTelefono(), x.getRfc(), x.getEdad()));
+        lista.stream().forEach(l -> al.insertar(l.getNombre(), l.getTelefono(), l.getRfc(), l.getEdad()));
         
         System.out.println("Datos enviados a la base de datos");
-        
-        // System.out.println("\nUsuario: " + p.toString());
     }
 }

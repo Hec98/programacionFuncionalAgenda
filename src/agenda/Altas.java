@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 
-public class Insert {
+public class Altas {
     public void insertar(String nombre, int telefono, String rfc, int edad) {
         try {
             Connection con = Conexion.getConexion();

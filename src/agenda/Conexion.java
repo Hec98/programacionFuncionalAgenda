@@ -13,7 +13,6 @@ public class Conexion {
         } catch (SQLException e) {
             System.err.println("Error -> "+ e.toString());
             return null;
-        }
-               
+        }    
     }     
 }
